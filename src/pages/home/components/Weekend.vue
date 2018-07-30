@@ -69,7 +69,6 @@
 		.item-img
 			width: 100%
 	.item-info
-		flex: 1
 		padding: .1rem
 		.item-title
 			line-height: .54rem

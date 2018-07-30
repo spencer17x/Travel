@@ -69,7 +69,6 @@
 			height: 1.7rem
 			padding: .1rem
 		.item-info
-			width: 0
 			flex: 1
 			min-width: 0
 			padding: .1rem
