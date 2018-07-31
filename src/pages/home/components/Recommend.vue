@@ -21,35 +21,8 @@
 <script>
 	export default {
 		name: 'HomeRecommend',
-		data () {
-			return {
-				recommendList: [{
-					id: '0001',
-					imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-					title: '上海迪士尼乐园',
-					desc: '云曼温泉能看秀的温泉'
-				},{
-					id: '0002',
-					imgUrl: 'http://img1.qunarzz.com/sight/p0/201401/06/3fbbddda915cb7637439d484440d36be.jpg_200x200_a54e87dd.jpg',
-					title: '杭州云曼温泉',
-					desc: '云曼温泉能看秀的温泉'
-				},{
-					id: '0003',
-					imgUrl: 'http://img1.qunarzz.com/sight/p0/201408/14/dba7220ac844600c07a1af703f640935.jpg_200x200_a84b7d79.jpg',
-					title: '杭州乐园',
-					desc: '云曼温泉能看秀的温泉'
-				},{
-					id: '0004',
-					imgUrl: 'http://img1.qunarzz.com/sight/p0/1706/45/456c4be6ba4fa604a3.img.jpg_200x200_81d9a0be.jpg',
-					title: '杭州浪浪浪水公园',
-					desc: '云曼温泉能看秀的温泉'
-				},{
-					id: '0005',
-					imgUrl: 'http://img1.qunarzz.com/sight/p0/201301/15/ac836d7b5423301093835fbb.jpg_200x200_504e2672.jpg',
-					title: '千岛湖王子谷漂流',
-					desc: '云曼温泉能看秀的温泉'
-				}]
-			}
+		props: {
+			recommendList: Array
 		}
 	}
 </script>
