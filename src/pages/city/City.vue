@@ -2,8 +2,15 @@
 	<div>
 		<city-header></city-header>
 		<city-search></city-search>
-		<city-list :hotCities="hotCities" :cities="cities"></city-list>
-		<city-alphabet :cities="cities"></city-alphabet>
+		<city-list 
+			:hotCities="hotCities" 
+			:cities="cities"
+			:letter="letter"
+			></city-list>
+		<city-alphabet 
+			:cities="cities"
+			@change="handleLetterChange"
+			></city-alphabet>
 	</div>
 </template>
 
@@ -24,33 +31,29 @@
 		data () {
 			return {
 				hotCities: [],
-				cities: {}
+				cities: {},
+				letter: ''
 			}
 		},
 		methods: {
-			getHomeInfo () {
+			getCityInfo () {
 				axios.get('/static/mock/city.json')
-					.then(this.getHomeInfoSucc)
+					.then(this.getCityInfoSucc)
 			},
-			getHomeInfoSucc (res) {
+			getCityInfoSucc (res) {
 				res = res.data
 				if (res.ret && res.data) {
 					const data = res.data
 					this.hotCities = data.hotCities
 					this.cities = data.cities
-					// console.log(data);
-					// console.log(data.hotCities);
-					// this.city = data.city
-					// this.swiperList = data.swiperList
-					// this.iconList = data.iconList
-					// this.recommendList = data.recommendList
-					// this.weekendList = data.weekendList
-					// console.log(res);
 				}
+			},
+			handleLetterChange (letter) {
+				this.letter = letter;
 			}
 		},
 		mounted () {
-			this.getHomeInfo()
+			this.getCityInfo()
 		}
 	}
 </script>
