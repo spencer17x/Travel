@@ -52,6 +52,7 @@
 		},
 		methods: {
 			handleCityClick (city) {
+				console.log(1);
 				this.$store.commit('changeCity',city)
 				this.$router.push('/')
 			}
