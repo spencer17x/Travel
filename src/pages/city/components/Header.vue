@@ -23,6 +23,7 @@
 		overflow: hidden
 		background: $bgColor
 		font-size: .32rem
+		position: relative
 		.header-back
 			position: absolute
 			left: 0
